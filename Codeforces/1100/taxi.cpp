@@ -6,6 +6,10 @@ using namespace std;
 
 int main(){
 
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);
+
     ll n;
     cin >> n;
 
@@ -26,11 +30,25 @@ int main(){
     ll group2 = count(group.begin(), group.end(), 2);
     ll group1 = count(group.begin(), group.end(), 1);
 
-    while (group1 > 0 && group3 >0){
+    if (group1 > 0 && group3 > 0){
+        if (group1 > group3){
+            taxi += group3;
+            group1 = group1 - group3;
+            group3 = 0;
+        }
+        else{
+            taxi += group1;
+            group3 = group3 - group1;
+            group1 = 0;
+        }
+
+        }
+
+    /*while (group1 > 0 && group3 >0){
         taxi++;
         group3--;
         group1--;
-    }
+    }*/
 
     taxi += group4;
     taxi += group3;
