@@ -2,7 +2,7 @@ n = int(input())
 visited = [False] * n
 i = 0
 k = 1
-
+ 
 while True:
     if all(visited):
         print('YES')
