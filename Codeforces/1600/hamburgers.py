@@ -1,4 +1,4 @@
-def guess(num, bredinv, sausinv, chesinv, bredcost, sauscost, chescost, wallet, bredreq, sausreq, chesreq):
+def guess(num):
 
     bredneed = (bredreq * num)
     sausneed = (sausreq * num)
@@ -33,7 +33,7 @@ right = 10**99
 
 while left < right:
     mid = (left + right + 1) // 2
-    if guess(mid, bredinv, sausinv, chesinv, bredcost, sauscost, chescost, wallet, bredreq, sausreq, chesreq):
+    if guess(mid):
         left = mid
     else:
         right = mid - 1
