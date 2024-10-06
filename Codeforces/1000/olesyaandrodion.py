@@ -5,6 +5,6 @@ if len(str(t)) > n:
 else:
     base = 10**(n-1)
     remainder = base % t
-    answer = base + (t - remainder) % t
+    answer = base + (t - remainder)
     print(answer)
 
